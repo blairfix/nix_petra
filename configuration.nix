@@ -88,6 +88,8 @@
 	packages = with pkgs; [
 
 	    firefox
+	    git
+	    syncthing
 	    kate
 	    neovim
 	    tailscale
