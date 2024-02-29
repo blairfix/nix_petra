@@ -74,7 +74,7 @@
     services.syncthing = {
 	enable = true;
 	user = "petra";
-	dataDir = "/home/petra/"; 
+	dataDir = "/home/petra"; 
 	configDir = "/home/petra/.config/syncthing";
     };
 
