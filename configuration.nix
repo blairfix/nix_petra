@@ -101,6 +101,7 @@
 	    gnome.gnome-disk-utility
 	    gnome-multi-writer
 	    retroarchFull
+	    onlyoffice-bin
 
 	];
     };
