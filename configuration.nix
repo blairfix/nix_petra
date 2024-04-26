@@ -103,6 +103,7 @@
 	    retroarchFull
 	    onlyoffice-bin
 	    minecraft
+	    minetest
 
 	];
     };
