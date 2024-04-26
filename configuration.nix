@@ -102,6 +102,7 @@
 	    gnome-multi-writer
 	    retroarchFull
 	    onlyoffice-bin
+	    minecraft
 
 	];
     };
