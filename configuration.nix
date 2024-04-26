@@ -96,7 +96,7 @@
 	    alacritty  
 	    libreoffice
 	    htop
-	    exa
+	    eza
 	    trash-cli
 	    gnome.gnome-disk-utility
 	    gnome-multi-writer
