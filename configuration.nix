@@ -49,7 +49,6 @@
     services.tailscale.enable = true;
 
     # Enable sound with pipewire.
-    sound.enable = true;
     hardware.pulseaudio.enable = false;
     security.rtkit.enable = true;
     services.pipewire = {
@@ -97,7 +96,7 @@
 	    htop
 	    eza
 	    trash-cli
-	    gnome.gnome-disk-utility
+	    gnome-disk-utility
 	    gnome-multi-writer
 	    retroarchFull
 	    onlyoffice-bin
