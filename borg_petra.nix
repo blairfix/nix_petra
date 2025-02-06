@@ -18,10 +18,14 @@
 	    Type = "simple";
 	    User = "petra";
 	};
-	path = with pkgs; [ bash ];
+	path = with pkgs; [ 
+	    bash
+	    borgbackup
+	];
 	script = ''
 	    bash /home/petra/bin/backup.sh
 	    '';
+	environment.BORG_RSH = "ssh -i /home/petra/.ssh/petra";
     };
 
 }
