@@ -17,7 +17,10 @@
 	serviceConfig = {
 	    Type = "simple";
 	    User = "root";
-	    ExecStart = "/home/petra/bin/backup.sh";
+	    path = with pkgs; [ bash ];
+	    script = ''
+		bash /home/petra/bin/backup.sh
+		'';
 	};
     };
 
