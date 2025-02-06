@@ -4,19 +4,19 @@
     # borg petra
     #----------------------------------------
 
-    systemd.timers."borg_petra" = {
+    systemd.user.timers."borg_petra" = {
 	wantedBy = [ "timers.target" ];
 	timerConfig = {
-	    OnCalendar = "*-*-*  *:05:00";
+	    OnCalendar = "*-*-*  *:10:00";
 	    Persistent = "true";
 	    Unit = "borg_petra.service";
 	};
     };
 
-    systemd.services."borg_petra" = {
+    systemd.user.services."borg_petra" = {
 	serviceConfig = {
 	    Type = "simple";
-	    User = "root";
+	    User = "petra";
 	    ExecStart = "/home/petra/bin/backup.sh";
 	};
     };
