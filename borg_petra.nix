@@ -7,7 +7,7 @@
     systemd.timers."borg_petra" = {
 	wantedBy = [ "timers.target" ];
 	timerConfig = {
-	    OnCalendar = "*-*-*  *:43:00";
+	    OnCalendar = "*-*-*  *:19:00";
 	    Persistent = "true";
 	    Unit = "borg_petra.service";
 	};
@@ -16,12 +16,12 @@
     systemd.services."borg_petra" = {
 	serviceConfig = {
 	    Type = "simple";
-	    User = "root";
-	    path = with pkgs; [ bash ];
-	    script = ''
-		bash /home/petra/bin/backup.sh
-		'';
+	    User = "petra";
 	};
+	path = with pkgs; [ bash ];
+	script = ''
+	    bash /home/petra/bin/backup.sh
+	    '';
     };
 
 }
