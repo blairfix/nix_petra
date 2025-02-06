@@ -101,6 +101,7 @@
 	    retroarchFull
 	    onlyoffice-bin
 	    minetest
+	    borgbackup
 
 	];
     };
