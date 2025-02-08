@@ -12,20 +12,20 @@
 	    Unit = "borg_petra.service";
 	};
     };
+    in {
 
-    systemd.services."borg_petra" = {
-	serviceConfig = {
-	    Type = "simple";
-	    User = "petra";
+	systemd.services."borg_petra" = {
+	    serviceConfig = {
+		Type = "simple";
+		User = "petra";
+	    };
+	    path = with pkgs; [ 
+		bash
+		borgbackup
+	    ];
+	    script = ''
+		bash /home/petra/bin/backup.sh
+		'';
 	};
-	path = with pkgs; [ 
-	    bash
-	    borgbackup
-	];
-	script = ''
-	    bash /home/petra/bin/backup.sh
-	    '';
-	environment.BORG_RSH = "ssh -i /home/petra/.ssh/petra";
-    };
 
-}
+    }
