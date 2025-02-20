@@ -18,6 +18,7 @@
 	    serviceConfig = {
 		Type = "simple";
 		User = "petra";
+		WorkingDirectory = "/home/petra/bin";
 	    };
 	    path = with pkgs; [ 
 		bash
