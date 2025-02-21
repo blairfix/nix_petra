@@ -12,21 +12,20 @@
 	    Unit = "borg_petra.service";
 	};
     };
-    in {
 
-	systemd.services."borg_petra" = {
-	    serviceConfig = {
-		Type = "simple";
-		User = "petra";
-		WorkingDirectory = "/home/petra/bin";
-	    };
-	    path = with pkgs; [ 
-		bash
-		borgbackup
-	    ];
-	    script = ''
-		bash /home/petra/bin/backup.sh
-		'';
+    systemd.services."borg_petra" = {
+	serviceConfig = {
+	    Type = "simple";
+	    User = "petra";
+	    WorkingDirectory = "/home/petra/bin";
 	};
+	path = with pkgs; [ 
+	    bash
+	    borgbackup
+	];
+	script = ''
+	    bash /home/petra/bin/backup.sh
+	    '';
+    };
 
-    }
+}
