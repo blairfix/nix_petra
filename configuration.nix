@@ -89,20 +89,19 @@
 	packages = with pkgs; [
 
 	    firefox
-		syncthing
-		kate
-		neovim
-		tailscale
-		alacritty  
-		libreoffice
-		htop
-		eza
-		trash-cli
-		gnome-disk-utility
-		gnome-multi-writer
-		retroarchFull
-		onlyoffice-bin
-		minetest
+	    syncthing
+	    neovim
+	    tailscale
+	    alacritty  
+	    libreoffice
+	    htop
+	    eza
+	    trash-cli
+	    gnome-disk-utility
+	    gnome-multi-writer
+	    retroarchFull
+	    onlyoffice-bin
+	    minetest
 
 	];
     };
