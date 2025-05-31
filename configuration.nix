@@ -80,6 +80,13 @@
 	configDir = "/home/petra/.config/syncthing";
     };
 
+    # steam
+    programs.steam = {
+	enable = true;
+	remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+	dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+	localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+    };
 
 
     # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -90,19 +97,20 @@
 	packages = with pkgs; [
 
 	    firefox
-	    syncthing
-	    neovim
-	    tailscale
-	    alacritty  
-	    libreoffice
-	    htop
-	    eza
-	    trash-cli
-	    gnome-disk-utility
-	    gnome-multi-writer
-	    retroarchFull
-	    onlyoffice-bin
-	    minetest
+		syncthing
+		neovim
+		tailscale
+		alacritty  
+		libreoffice
+		htop
+		bottom
+		eza
+		trash-cli
+		gnome-disk-utility
+		gnome-multi-writer
+		retroarchFull
+		onlyoffice-bin
+		minetest
 
 	];
     };
@@ -121,7 +129,7 @@
 
     ];
 
-    
+
     # for bash scripts 
     services.envfs.enable = true;
 
