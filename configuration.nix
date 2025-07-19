@@ -37,6 +37,8 @@
       displayManager.sddm.wayland.enable = true;
     };
 
+    # waydroid
+    virtualisation.waydroid.enable = true;
 
     # CUPS 
     services.printing.enable = true;
