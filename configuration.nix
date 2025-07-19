@@ -6,8 +6,8 @@
 	[ 
 	# include
 	./hardware-configuration.nix
-	./borg_petra.nix
-	./borg_petra_nas.nix
+	    ./borg_petra.nix
+	    ./borg_petra_nas.nix
 
 	];
 
@@ -29,12 +29,12 @@
 
     # Select internationalisation properties.
     i18n.defaultLocale = "en_CA.UTF-8";
-    
+
     # KDE wayland
     services = {
-      desktopManager.plasma6.enable = true;
-      displayManager.sddm.enable = true;
-      displayManager.sddm.wayland.enable = true;
+	desktopManager.plasma6.enable = true;
+	displayManager.sddm.enable = true;
+	displayManager.sddm.wayland.enable = true;
     };
 
     # CUPS 
@@ -60,10 +60,19 @@
     programs.steam = {
 	enable = true;
 	remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-	dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-	localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+	    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+	    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
     };
 
+    # flatpak
+    services.flatpak.enable = true;
+    systemd.services.flatpak-repo = {
+	wantedBy = [ "multi-user.target" ];
+	path = [ pkgs.flatpak ];
+	script = ''
+	    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+	    '';
+    };
 
     # user account 
     users.users.petra = {
@@ -88,29 +97,28 @@
     environment.systemPackages = with pkgs; [
 
 	borgbackup
-	git
-	firefox
-	syncthing
-	neovim
-	tailscale
-	alacritty  
-	libreoffice
-	htop
-	bottom
-	eza
-	trash-cli
-	gnome-disk-utility
-	gnome-multi-writer
-	retroarchFull
-	onlyoffice-bin
-	minetest
-	wl-clipboard
-	wayland-utils
+	    git
+	    firefox
+	    syncthing
+	    neovim
+	    tailscale
+	    alacritty  
+	    libreoffice
+	    htop
+	    bottom
+	    eza
+	    trash-cli
+	    gnome-disk-utility
+	    gnome-multi-writer
+	    retroarchFull
+	    onlyoffice-bin
+	    minetest
+	    wl-clipboard
+	    wayland-utils
+	    unzip
 
-	wineWowPackages.waylandFull
-	winetricks
 
-    ];
+	    ];
 
     # for bash scripts 
     services.envfs.enable = true;
