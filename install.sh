@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 
 # install configs
 sudo cp *.nix /etc/nixos/
