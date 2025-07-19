@@ -29,11 +29,6 @@
 
     # Select internationalisation properties.
     i18n.defaultLocale = "en_CA.UTF-8";
-
-    # Enable the KDE x11
-    #services.xserver.enable = true;
-    #services.displayManager.sddm.enable = true;
-    #services.desktopManager.plasma6.enable = true;
     
     # KDE wayland
     services = {
@@ -42,10 +37,6 @@
       displayManager.sddm.wayland.enable = true;
     };
 
-    # Configure keymap in X11
-    #services.xserver.xkb = {
-    #    layout = "us";
-    #};
 
     # CUPS 
     services.printing.enable = true;
@@ -77,28 +68,15 @@
 	isNormalUser = true;
 	description = "petra";
 	extraGroups = [ "networkmanager" "wheel" ];
-	packages = with pkgs; [
-
-	    firefox
-		syncthing
-		neovim
-		tailscale
-		alacritty  
-		libreoffice
-		htop
-		bottom
-		eza
-		trash-cli
-		gnome-disk-utility
-		gnome-multi-writer
-		retroarchFull
-		onlyoffice-bin
-		minetest
-		wl-clipboard
-		wayland-utils
-
-	];
     };
+
+    # user account 
+    users.users.blair = {
+	isNormalUser = true;
+	description = "blair";
+	extraGroups = [ "networkmanager" "wheel" ];
+    };
+
 
 
     # Allow unfree packages
@@ -109,6 +87,24 @@
 
 	borgbackup
 	git
+	firefox
+	syncthing
+	neovim
+	tailscale
+	alacritty  
+	libreoffice
+	htop
+	bottom
+	eza
+	trash-cli
+	gnome-disk-utility
+	gnome-multi-writer
+	retroarchFull
+	onlyoffice-bin
+	minetest
+	wl-clipboard
+	wayland-utils
+	waydroid
 
     ];
 
