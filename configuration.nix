@@ -53,6 +53,9 @@
 	pulse.enable = true;
     };
 
+    # waydroid
+    virtualisation.waydroid.enable = true;
+
     # steam
     programs.steam = {
 	enable = true;
