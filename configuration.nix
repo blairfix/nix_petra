@@ -110,8 +110,8 @@
 	    trash-cli
 	    gnome-disk-utility
 	    gnome-multi-writer
-	    retroarchFull
-	    onlyoffice-bin
+	    retroarch-full
+	    onlyoffice-desktopeditors
 	    minetest
 	    wl-clipboard
 	    wayland-utils
