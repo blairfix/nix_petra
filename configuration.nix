@@ -112,7 +112,7 @@
 	    gnome-multi-writer
 	    retroarch-full
 	    onlyoffice-desktopeditors
-	    minetest
+	    luanti
 	    wl-clipboard
 	    wayland-utils
 	    unzip
