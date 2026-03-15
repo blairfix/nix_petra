@@ -116,6 +116,7 @@
 	    wl-clipboard
 	    wayland-utils
 	    unzip
+	    chromium
 
 
 	    ];
