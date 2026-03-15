@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+
+
+status=$( tailscale status | wc -l)
+
+if [ $status -gt 1 ]
+then
+    echo Tailscale is on. Turning it off
+    sudo tailscale down
+else
+    echo Tailscale is off. Turning it on.
+    sudo tailscale up
+fi
+
