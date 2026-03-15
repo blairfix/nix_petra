@@ -8,3 +8,5 @@ mkdir /home/petra/bin
 cp yay /home/petra/bin
 cp nix_cleanup /home/petra/bin
 cp tailscale /home/petra/bin
+
+cp tailscale.desktop ~/Desktop

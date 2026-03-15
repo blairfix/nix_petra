@@ -8,9 +8,12 @@ then
     echo Tailscale is on. Turning it off
     sudo tailscale down
     tailscale status
+    sleep 5
+
 else
     echo Tailscale is off. Turning it on.
     sudo tailscale up
     tailscale status
+    sleep 5
 fi
 
