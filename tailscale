@@ -7,8 +7,10 @@ if [ $status -gt 1 ]
 then
     echo Tailscale is on. Turning it off
     sudo tailscale down
+    tailscale status
 else
     echo Tailscale is off. Turning it on.
     sudo tailscale up
+    tailscale status
 fi
 
