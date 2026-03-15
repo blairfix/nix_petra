@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Exec=/home/petra/bin/tailscale
+Name=SSH Server
+GenericName=tailscale
+Comment=turn on/off tailscale
+Encoding=UTF-8
+Terminal=true
+Type=Application
+Categories=Application;Network;
