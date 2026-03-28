@@ -7,7 +7,7 @@
     systemd.timers."borg_petra" = {
 	wantedBy = [ "timers.target" ];
 	timerConfig = {
-	    OnCalendar = "*-*-*  *:19:00";
+	    OnCalendar= "*-*-* 03:00:00";
 	    Persistent = "true";
 	    Unit = "borg_petra.service";
 	};
