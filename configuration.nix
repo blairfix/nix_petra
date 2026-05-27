@@ -97,29 +97,29 @@
     environment.systemPackages = with pkgs; [
 
 	borgbackup
-	    git
-	    firefox
-	    syncthing
-	    neovim
-	    tailscale
-	    alacritty  
-	    libreoffice
-	    htop
-	    bottom
-	    eza
-	    trash-cli
-	    gnome-disk-utility
-	    gnome-multi-writer
-	    retroarch-full
-	    onlyoffice-desktopeditors
-	    luanti
-	    wl-clipboard
-	    wayland-utils
-	    unzip
-	    chromium
+	git
+	firefox
+	syncthing
+	neovim
+	tailscale
+	alacritty  
+	fzf
+	libreoffice
+	htop
+	bottom
+	eza
+	trash-cli
+	gnome-disk-utility
+	gnome-multi-writer
+	retroarch-full
+	onlyoffice-desktopeditors
+	luanti
+	wl-clipboard
+	wayland-utils
+	unzip
+	freetube
 
-
-	    ];
+	];
 
     # for bash scripts 
     services.envfs.enable = true;
