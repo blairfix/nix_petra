@@ -6,8 +6,8 @@
 	[ 
 	# include
 	./hardware-configuration.nix
-	    ./borg_petra.nix
-	    ./borg_petra_nas.nix
+	./borg_petra.nix
+	./borg_petra_nas.nix
 
 	];
 
