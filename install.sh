@@ -9,4 +9,5 @@ cp yay /home/petra/bin
 cp nix_cleanup /home/petra/bin
 cp tailscale /home/petra/bin
 
-cp tailscale.desktop ~/Desktop
+
+cp -r mathlock /home/petra/bin
