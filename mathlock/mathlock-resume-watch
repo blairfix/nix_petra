@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+dbus-monitor --system \
+  "type='signal',interface='org.freedesktop.login1.Manager',member='PrepareForSleep'" |
+while IFS= read -r line; do
+    case "$line" in
+        *member=PrepareForSleep*)
+            IFS= read -r value || exit
+            case "$value" in
+                *"boolean false"*)
+                    sleep 2
+                    mathlock
+                    ;;
+            esac
+            ;;
+    esac
+done
+
