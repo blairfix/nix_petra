@@ -118,7 +118,7 @@
 	wayland-utils
 	unzip
 	freetube
-	(callPackage /home/blair/Desktop/mathlock/package.nix {})
+	(callPackage /home/petra/bin/mathlock/package.nix {})
 
 	];
 
