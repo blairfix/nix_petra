@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
+# Run once when this script starts at login.
+mathlock
+
 dbus-monitor --system \
-  "type='signal',interface='org.freedesktop.login1.Manager',member='PrepareForSleep'" |
+  "type='signal',sender='org.freedesktop.login1',interface='org.freedesktop.login1.Manager',member='PrepareForSleep'" |
 while IFS= read -r line; do
     case "$line" in
         *member=PrepareForSleep*)
@@ -9,10 +12,9 @@ while IFS= read -r line; do
             case "$value" in
                 *"boolean false"*)
                     sleep 2
-                    mathlock
+		    /run/current-system/sw/bin/mathlock
                     ;;
             esac
             ;;
     esac
 done
-
