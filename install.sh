@@ -13,5 +13,5 @@ cp tailscale /home/petra/bin
 mkdir -p ~/.config/autostart/
 
 cp -r mathlock /home/petra/bin
-cp mathlock/mathlock-resume-watch ~/.local/bin
+cp mathlock/mathlock-resume-watch /home/petra/bin
 cp mathlock/mathlock-resume-watch.desktop ~/.config/autostart/

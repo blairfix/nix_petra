@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
 Name=Mathlock resume watcher
-Exec=/home/petra/.local/bin/mathlock-resume-watch
+Exec=/home/petra/bin/mathlock-resume-watch
 Terminal=false
 
