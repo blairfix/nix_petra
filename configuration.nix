@@ -121,6 +121,7 @@
 	(callPackage /home/petra/bin/mathlock/package.nix {})
 	(callPackage /home/petra/bin/petra-math/package.nix {})
 
+	worldpainter
 	];
 
     # for bash scripts 
